@@ -1,0 +1,119 @@
+---
+title: "rmd_example"
+author: "Samantha Toet"
+date: "10/16/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intro to R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+R Markdown documents are fully **reproducible**, they can be automatically regenerated whenever underlying R code or data changes
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. 
+
+### Installation
+
+If you have not yet done so:
+```{r eval=FALSE}
+install.packages("rmarkdown")
+library(rmarkdown)
+```
+
+### Using R Code
+
+There are two options when it comes to using R code in an Rmarkdown document:
+
+- Code chunks
+
+- Inline code
+
+#### Code chunks
+
+- Inserting a new code chunk:
+    + keyboard shortcut Ctrl + Alt + I (OS X: Cmd + Option + I)
+    + the Insert command in the editor toolbar (see other languages as well)
+
+- When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+Chunk output can be customized with `knitr` options, arguments set in the {} of a chunk header.
+
+Examples:
+
+- `include = FALSE`: code runs and results be used by other chunks, but doesn't appear in finished file
+- `echo = FALSE`:  prevents code, but not the results from appearing in the finished file (useful way to embed figures)
+- `message = FALSE`: messages do not appear in the finished file
+- `warning = FALSE`: warnings do not appear in the finished file
+- `fig.cap = "..."` adds a caption to graphical results
+
+See [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) for all options.
+
+#### Inline code
+
+Code results can be inserted directly into the text of a .Rmd file by enclosing the code with \` r\`
+
+You can even use different languages (EX. Python) for this
+
+
+### Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+### Formatting Text
+
+[R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+[R Markdown Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+For emphasis:
+
+*italics* and _italics_
+
+**bold** and __bold__
+
+Heading size:
+
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+
+Lists:
+
+1. Ordered
+2. Numeric 
+3. List
+
+* Unordered 
+* Bulleted
+* List
+
+Links:
+
+Insert links with a [] around the content you want to make a hyperlink followed by the url in ()
+
+[This is an example link to my Github](https://github.com/SamanthaToet)
+
+Images:
+
+Similar to links, images are added by using an ! followed by the alt text in a [] followed by the path or url in ()
+
+For example, here's a picture of some cookies off the internet:
+
+![cookies](https://secure.meetupstatic.com/photos/event/d/d/2/9/600_484796617.jpeg)
+
